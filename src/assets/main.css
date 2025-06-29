@@ -1,0 +1,45 @@
+/* Chess board colors */
+:root {
+  --chess-board-light: #f0d9b5; /* Light square color */
+  --chess-board-dark: #b58863; /* Dark square color */
+  --chess-board-hover-light: hsla(49, 89%, 61%, 0.317); /* Light square hover color */
+  --selected-square: #ffcc00; /* Selected square color */
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 400px;
+  height: 400px;
+}
+
+.chess-board-square {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 1px solid #000;
+}
+
+.chess-board-square.light {
+  background-color: var(--chess-board-light);
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--chess-board-hover-light);
+  }
+}
+
+.chess-board-square.dark {
+  background-color: var(--chess-board-dark);
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--chess-board-hover-light);
+  }
+}
+
+
+
+
