@@ -1,9 +1,55 @@
 /* Chess board colors */
 :root {
-  --chess-board-light: #f0d9b5; /* Light square color */
-  --chess-board-dark: #b58863; /* Dark square color */
-  --chess-board-hover-light: hsla(49, 89%, 61%, 0.317); /* Light square hover color */
-  --selected-square: #ffcc00; /* Selected square color */
+  --chess-board-light: #f0d9b5;
+  /* Light square color */
+  --chess-board-dark: #b58863;
+  /* Dark square color */
+  --chess-board-hover-light: hsla(49, 89%, 61%, 0.317);
+  /* Light square hover color */
+  --selected-square: #ffcc00;
+  /* Selected square color */
+}
+
+/* body {
+  background-color: #1c1c1c;
+} */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.score-history {
+  width: 180px;
+}
+
+.score-item {
+  width: 180px;
+}
+
+.score-item header {
+  font-size: 1.125rem;
+}
+
+.score-item footer {
+  font-size: 0.75rem;
+}
+
+
+.chessboard-layout {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.captured-pieces {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .chess-board {
@@ -27,6 +73,7 @@
 .chess-board-square.light {
   background-color: var(--chess-board-light);
   transition: background-color 0.3s;
+
   &:hover {
     background-color: var(--chess-board-hover-light);
   }
@@ -35,11 +82,8 @@
 .chess-board-square.dark {
   background-color: var(--chess-board-dark);
   transition: background-color 0.3s;
+
   &:hover {
     background-color: var(--chess-board-hover-light);
   }
 }
-
-
-
-
